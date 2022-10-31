@@ -42,9 +42,8 @@
             </nav>
         </header>
         <main>
-            <h5>Now playing:</h5>
-            <div id="app" :style="{background: color}">
-                <h1>{{ timestamp }}</h1>
+            <div id="app">
+                <h1>Now playing:</h1>
                 <div id="player">
                     <div class="album">
                         <img :src="picture">

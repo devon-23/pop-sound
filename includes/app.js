@@ -7,7 +7,6 @@ const app = Vue.createApp({
             albumName: '',
             artistName: '',
             username: 'devonbarks',
-            gender: '',
             picture: '',
             oldPicture: '',
             songLength: '',
