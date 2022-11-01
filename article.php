@@ -27,10 +27,10 @@
                 <p>Article not found. =(</p>
             <?php else: ?>
                 <div class="article">
-                    <h2><?= htmlspecialchars($article['title']); ?></h2>
-                    <p><?= htmlspecialchars($article['content']); ?></p>
+                    <h2 id="article-title"><?= htmlspecialchars($article['title']); ?></h2>
+                    <p id="article-content"><?= htmlspecialchars($article['content']); ?></p>
                 </div>
-        <?php endif ?>
+            <?php endif ?>
         </div>
     </body>
 </html>

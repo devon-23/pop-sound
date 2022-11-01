@@ -31,8 +31,8 @@
         <h1 class="title">Articles</h1>
         <div class="articles">
             <?php if (empty($articles)): ?>
-                    <p>No articles found. =(</p>
-                <?php else: ?>
+                    <p>No articles found.</p>
+            <?php else: ?>
                 <ul>
                     <?php foreach ($articles as $article): ?>
                     <li>
