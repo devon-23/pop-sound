@@ -22,9 +22,10 @@
                 <li><a href="#">2022</a></li>
             </ul>
         </nav>
-        <div class="playlists">
-            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="400" style="width:100%;max-width:610px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/best-songs-of-all-time/pl.u-8aAVVZbToPpaBED"></iframe>
-            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="400" style="width:100%;max-width:610px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/its-2-12-and-schools-out-for-the-day/pl.u-xlyNjv2Fk32pbZl"></iframe>
+        <div id="playlist-container">
+            <div id="playlist">
+                <!-- playlists -->
+            </div>
         </div>
     </body>
     <script src="./includes/script.js"></script>

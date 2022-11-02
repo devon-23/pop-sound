@@ -190,18 +190,39 @@ h1 {
     text-align: center;
 }
 
-.playlists {
-    background-color: rgb(255, 255, 236);
-    /* border-radius: 3px; */
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-    /* width: 500px;
-    height: 400px; */
-    margin: 2rem;
-    /* margin: 0 auto; */
+#playlist-container {
+    /* display: grid; */
+    flex-wrap: wrap;
 
-    justify-content: space-between;
-    /* padding: 0.5rem 1rem 1rem;
-    letter-spacing: .1px;*/
-    box-sizing: border-box;
-    align-items: center; 
+    /* gap: 50px 100px; */
 }
+
+#playlist {
+    width: 375px;
+    height: 340px;
+    /* padding: 0; */
+    /* overflow: hidden; */
+    margin: 0 auto;
+}
+  
+#scaled-frame {
+    width: 500px;
+    height: 450px;
+    border: 0px;
+  }
+  
+  #scaled-frame {
+    zoom: 0.75;
+    -moz-transform: scale(0.75);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.75);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.75);
+    -webkit-transform-origin: 0 0;
+  }
+  
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    #scaled-frame {
+      zoom: 1;
+    }
+  }
