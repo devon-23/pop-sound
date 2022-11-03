@@ -281,3 +281,13 @@ h1 {
     padding-top: 10px;
     padding-right: 10px;
 }
+
+#album-picture {
+    position: relative;
+    float: left;
+    border: 5px solid #fff; 
+}
+
+.recent-song {
+    height: 200px;
+}

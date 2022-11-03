@@ -21,27 +21,28 @@
         </form>
     </head>
     <body>
-        <h1 class="title">Recently played songs</h1>
-        <ol class="playlist">
-            <?php foreach($tracks->track as $k=>$v): ?>
-                <li>
-                    <a href="album.php?album=<?= $v->album; ?>&artist=<?php foreach($v->artist as $q=>$t):echo $v->artist; ?>&user=<?=$user?>">
-                        <img src="<?= $v->image[2]; ?>" alt="<?= $t->image[2]; ?>">
-                        <?php endforeach; ?>
-                    </a>
-                    <br><br>
-                    <a href="song.php?track=<?= $v->name; ?>&artist=<?php foreach($v->artist as $q=>$t):echo $v->artist; ?>&user=<?=$user?>">
-                        <?= $v->name; ?> 
-                        <?php endforeach; ?>
-                    </a>
-                    <br><br>
-                    <a href="artist.php?artist=<?php foreach($v->artist as $q=>$t):echo $v->artist; ?>&user=<?=$user?>">
-                        by <?= $v->artist; ?>
-                        <?php endforeach; ?>
-                    </a>
-                    <br><br><br>
-                </li>
-            <?php endforeach; ?>
-        </ol>
+        <div class="title">Recently played songs</div>
+        <div class="playlist">
+            <ol>
+                <?php foreach($tracks->track as $k=>$v): ?>
+                    <li class="recent-song">
+                        <a href="album.php?album=<?= $v->album; ?>&artist=<?php foreach($v->artist as $q=>$t): echo $v->artist; ?>&user=<?=$user?>">
+                            <img id="album-picture" src="<?= $v->image[2]; ?>" alt="<?= $t->image[2]; ?>">
+                            <?php endforeach; ?>
+                        </a>
+                        <br><br>
+                        <a href="song.php?track=<?= $v->name; ?>&artist=<?php foreach($v->artist as $q=>$t):echo $v->artist; ?>&user=<?=$user?>">
+                            <?= $v->name; ?>
+                            <?php endforeach; ?>
+                        </a>
+                        <br><br>
+                        <a href="artist.php?artist=<?php foreach($v->artist as $q=>$t):echo $v->artist; ?>&user=<?=$user?>">
+                            by <?= $v->artist; ?>
+                            <?php endforeach; ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ol>
+        </div>
     </body>
 </html>

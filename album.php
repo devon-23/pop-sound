@@ -15,19 +15,22 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <h2><a href="index.php?user=<?=$_GET["user"]?>">back</a></h2>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href='style.css'>
+        <link rel="stylesheet" type="text/css" href="includes/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?= $albumName ?> | <?= $artist ?></title>
+        <form>
+            <input id="back" type="button" value="back" onclick="history.go(-1)">
+        </form>
     </head>
-    <body style="background-color: #f8e3d8">
+
+    <body>
         <div class="artist-title">
             <?php if ($artist === null || $albumName === null): ?>
                     <h3>album not found.</h3>
             <?php else: ?>
-                <h3><?= $artist ?></h3>
-                <h1><?= $albumName ?></h1>
+                <div id="artist-name"><?= $artist ?></div>
+                <div id="track-name"><?= $albumName ?></div>
             <?php endif; ?>
         </div>
         <section>
