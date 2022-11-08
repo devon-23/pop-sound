@@ -67,13 +67,13 @@
                         $date = date_create($v->date, timezone_open('Etc/GMT+0')); //convert to EST
                         date_timezone_set($date, timezone_open('America/New_York'));
                         echo $date->format('F j g:i a');
-                    } else {
-                        echo date('F j g:i a'); //currently playing music
+                    } else { ?>
+                        <?= date('F j g:i a'); //currently playing music
                     }
                     $i++;
                     if ($i == 1) break;
                 endforeach; ?>
-            </h6>
+                </h6>
             </div>
         </main>
         <footer>

@@ -2,7 +2,7 @@ const app = Vue.createApp({
     el: '#app',
     data() {
         return {
-            songName: '',
+            songName: 'Loading...',
             timestamp: '',
             albumName: '',
             artistName: '',
@@ -13,14 +13,10 @@ const app = Vue.createApp({
             countSec: 0,
             countMin: 0,
             songCount: 0,
-            songMin: '',
-            songSec: '',
+            songMin: 0,
+            songSec: 0,
             military: true,
             api_key: "092d316884d8385f35ad8b84f5f42ef8",
-            color: '',
-            bgc: {
-                background: 'blue'
-            }
         }
     },
     created() {

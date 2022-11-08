@@ -41,10 +41,10 @@ $(document).ready(function() {
             `<div id="playlist"><iframe id="scaled-frame" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/january-2020-bops/pl.u-gxblYx1I5DpMN2k"></iframe></div>` +
             `<div id="playlist"><iframe id="scaled-frame" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/january-2020-bops/pl.u-gxblYx1I5DpMN2k"></iframe></div>` +
             `<div id="playlist"><iframe id="scaled-frame" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/january-2020-bops/pl.u-gxblYx1I5DpMN2k"></iframe></div>` +
-            `<div id="playlist"><iframe id="scaled-frame" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/january-2020-bops/pl.u-gxblYx1I5DpMN2k"></iframe></div>` +
+            `<div id="playlist"><iframe id="scaled-frame" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/january-2020-bops/pl.u-gxblYx1I5DpMN2k"></iframe></div>`;
       } else if (e.target.innerText == 2022) {
          document.getElementById('playlist-container').innerHTML = "hi";
       }
-    console.log(e.target.innerText)
+   //  console.log(e.target.innerText)
    });
 });
