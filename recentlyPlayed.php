@@ -30,14 +30,13 @@
                             <img id="album-picture" src="<?= $v->image[2]; ?>" alt="<?= $t->image[2]; ?>">
                             <?php endforeach; ?>
                         </a>
-                        <br><br>
+                        <br>
                         <a href="song.php?track=<?= $v->name; ?>&artist=<?php foreach($v->artist as $q=>$t):echo $v->artist; ?>&user=<?=$user?>">
-                            <?= $v->name; ?>
+                            <p id="song-name"><?= $v->name; ?></p>
                             <?php endforeach; ?>
                         </a>
-                        <br><br>
                         <a href="artist.php?artist=<?php foreach($v->artist as $q=>$t):echo $v->artist; ?>&user=<?=$user?>">
-                            by <?= $v->artist; ?>
+                            <p id="artist-name"> by <?= $v->artist; ?> </p>
                             <?php endforeach; ?>
                         </a>
                     </li>

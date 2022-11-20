@@ -18,17 +18,17 @@ nav {
     margin: 0 auto;
 }
 
-nav ul {
+.nav-ul, .year {
     padding: 0;
     list-style-type: none;
     text-align: center;
 }
 
-nav ul li { 
+.nav-ul li, .year li { 
     display: inline-block;
 }
 
-nav ul li a {
+.nav-ul li a, .year li a {
     color: #5971AD;
     padding: 16px 46px;
     text-decoration: none;
@@ -36,7 +36,7 @@ nav ul li a {
     text-transform: lowercase;
 }
 
-a:hover {
+.nav-ul li a:hover, .year li a:hover {
     background-color:  rgba(104, 187, 212, 0.621);
     border: rgb(225 66 35);
     border-radius: 25px;
@@ -218,7 +218,7 @@ h1 {
     text-align: center;
     margin: 0 auto;
 }
-  
+
 #scaled-frame {
     width: 500px;
     height: 450px;
@@ -290,4 +290,56 @@ h1 {
 
 .recent-song {
     height: 200px;
+}
+
+.recent-song a {
+    text-decoration: none;
+    color: black;
+}
+
+#song-name {
+    font-size: 1.1em;
+    margin: 0 0 0 0;
+    margin-top: 100px;
+    margin-left: 10px;
+}
+
+#artist-name {
+    font-size: 1.5em;
+    margin: 0 0 0 0;
+}
+
+.tabs, .genre-tabs {
+    width: 80vw !important;
+    height: 900px;
+}
+
+.ui-widget.ui-widget-content {
+    width: 80vw;
+    margin: 0 auto;
+    background-color: rgba(94, 94, 123, 0.435);
+}
+
+.ui-tabs .ui-tabs-nav {
+    background-color: rgb(181, 181, 234);
+    /* margin: 0 auto; */
+    text-align: center;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    border: 1px solid rgb(199, 199, 255) !important;
+    background: rgb(199, 199, 255) !important;
+}
+
+.ui-widget-header {
+    border: none;
+}
+
+.ui-tabs .ui-tabs-nav {
+    text-align: center;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    float: none !important;
+    display: inline-block;
 }
