@@ -18,17 +18,17 @@ nav {
     margin: 0 auto;
 }
 
-.nav-ul, .year {
+#default-nav {
     padding: 0;
     list-style-type: none;
     text-align: center;
 }
 
-.nav-ul li, .year li { 
+#default-nav li { 
     display: inline-block;
 }
 
-.nav-ul li a, .year li a {
+#default-nav li a {
     color: #5971AD;
     padding: 16px 46px;
     text-decoration: none;
@@ -36,7 +36,7 @@ nav {
     text-transform: lowercase;
 }
 
-.nav-ul li a:hover, .year li a:hover {
+#default-nav li a:hover {
     background-color:  rgba(104, 187, 212, 0.621);
     border: rgb(225 66 35);
     border-radius: 25px;

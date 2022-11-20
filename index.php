@@ -33,7 +33,7 @@
     <body>
         <header>
             <h1 class="title">Pop-Sound</h1>
-            <nav class="navigation">
+            <nav class="navigation" id="default-nav">
                 <ul class="nav-ul">
                     <li><a href="/~barcla29/pop-sound/playlists.php">Playlists</a></li>
                     <li><a href="/~barcla29/pop-sound/recentlyPlayed.php">Recently Played</a></li>

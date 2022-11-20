@@ -24,7 +24,7 @@
                 <li><a href="#tabs-3">Aenean lacinia</a></li>
             </ul>
             <div id="tabs-1">
-                <nav class="navigation">
+                <nav class="navigation" id="default-nav">
                     <ul class="year">
                         <li><a href="#">2019</a></li>
                         <li><a href="#">2020</a></li>
@@ -40,7 +40,7 @@
             </div>
             <div id="tabs-2">
             <nav class="navigation">
-                    <ul class="year">
+                    <ul class="replay-year" id="default-nav">
                         <li><a href="#">2015</a></li>
                         <li><a href="#">2016</a></li>
                         <li><a href="#">2017</a></li>
@@ -51,7 +51,7 @@
                         <li><a href="#">2022</a></li>
                     </ul>
                 </nav>
-                <div id="playlist-container">
+                <div id="replay-playlist-container">
                     <div id="playlist">
                         <!-- playlists -->
                     </div>

@@ -46,7 +46,24 @@ $('ul.year li').click(function(e) {
    }
 });
 
-$( function() {
-   $( "#tabs" ).tabs();
- } );
+$( "#tabs" ).tabs();
 
+$('ul.replay-year li').click(function(e) { 
+   if (e.target.innerText == "2015") {
+      document.getElementById('replay-playlist-container').innerHTML = `<div id="playlist"><iframe id="scaled-frame" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/replay-2015/pl.rp-XWWdCyk8P7o1"></iframe></div>`;
+   } else if (e.target.innerText == "2016") {
+      document.getElementById('replay-playlist-container').innerHTML = `<div id="playlist"><iframe id="scaled-frame" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/replay-2016/pl.rp-E556S30GJ7oj"></iframe></div>`;
+   } else if (e.target.innerText == "2017") {
+      document.getElementById('replay-playlist-container').innerHTML = `<div id="playlist"><iframe id="scaled-frame" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/replay-2017/pl.rp-9xxQFyzDgbEo"></iframe></div>`;
+   } else if (e.target.innerText == "2018") {
+      document.getElementById('replay-playlist-container').innerHTML = `<div id="playlist"><iframe id="scaled-frame" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/replay-2018/pl.rp-jddGfJQko9vG"></iframe></div>`;
+   } else if (e.target.innerText == "2019") {
+      document.getElementById('replay-playlist-container').innerHTML = `<div id="playlist"><iframe id="scaled-frame" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/replay-2019/pl.rp-BooEUbyVYJPo"></iframe></div>`;
+   } else if (e.target.innerText == "2020") {
+      document.getElementById('replay-playlist-container').innerHTML = `<div id="playlist"><iframe id="scaled-frame" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/replay-2020/pl.rp-P449SYB3noVO"></iframe></div>`;
+   } else if (e.target.innerText == "2021") {
+      document.getElementById('replay-playlist-container').innerHTML = `<div id="playlist"><iframe id="scaled-frame" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/replay-2021/pl.rp-8AA9cXRj68o3"></iframe></div>`;
+   } else if (e.target.innerText == "2022") {
+      document.getElementById('replay-playlist-container').innerHTML = `<div id="playlist"><iframe id="scaled-frame" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/replay-2022/pl.rp-755XHR8YDe6V"></iframe></div>`;
+   }
+});
