@@ -29,20 +29,32 @@
     </head>
     <body>
         <h1 class="title">Articles</h1>
+        <br><br>
+        <div class="article-container">
+            <div class="main-article">
+                <div class="main-image">
+                    <img src="includes/images/rowan.jpeg" height="250px" width="420px">
+                </div>
+                <div class="main-info">
+                    <p>newest post:</p>
+                    <p><?= $articles[0]['title'] ?></p>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br>
         <div class="articles">
             <?php if (empty($articles)): ?>
                     <p>No articles found.</p>
             <?php else: ?>
-                <ul>
                     <?php foreach ($articles as $article): ?>
-                    <li>
-                        <article>
-                            <h2><a href="article.php?id=<?= $article['id']; ?>"><?= htmlspecialchars($article['title']); ?></a></h2>
+                        <div class="article">
+                            <a href="article.php?id=<?= $article['id']; ?>">
+                            <img src="includes/images/temp.png" height=150px width=150px>
+                            <h2><?= htmlspecialchars($article['title']); ?></h2>
                             <p><?= htmlspecialchars($article['content']); ?></p>
-                        </article>
-                    </li>
+                            </a>
+                        </div>
                     <?php endforeach; ?>
-                </ul>
             <?php endif; ?>
         </div>
     </body>

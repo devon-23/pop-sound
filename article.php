@@ -26,7 +26,7 @@
             <?php if ($article === null): ?>
                 <p>Article not found. =(</p>
             <?php else: ?>
-                <div class="article">
+                <div class="sing-article">
                     <h2 id="article-title"><?= htmlspecialchars($article['title']); ?></h2>
                     <p id="article-content"><?= htmlspecialchars($article['content']); ?></p>
                 </div>
