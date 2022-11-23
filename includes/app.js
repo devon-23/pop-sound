@@ -3,6 +3,7 @@ const app = Vue.createApp({
     data() {
         return {
             songName: 'Loading...',
+            oldSongName: '',
             timestamp: '',
             albumName: '',
             artistName: '',
@@ -20,6 +21,7 @@ const app = Vue.createApp({
         }
     },
     created() {
+        this.nowPlaying();
         setInterval(() => {
           this.getNow();
         }, 1000),
@@ -56,6 +58,7 @@ const app = Vue.createApp({
             const results = await res.json()
             const track1 = results.recenttracks.track[0]
             if (track1["@attr"] !== undefined) {
+                this.oldSongName = this.songName
                 this.songName = track1.name
                 this.albumName = track1.album.name
                 this.artistName = `by ${track1.artist["#text"]}`
@@ -66,7 +69,7 @@ const app = Vue.createApp({
                     this.picture = ""
                 }
 
-                if (this.oldPicture !== this.picture) { //new song
+                if (this.oldPicture !== this.picture || this.oldSongName !== this.songName) { //new song
                     this.countSec = 0
                     this.countMin = 0
                     this.songCount = 0
