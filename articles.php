@@ -6,6 +6,10 @@
         FROM article
         ORDER BY published_at;";
 
+    // $sql = "DELETE FROM article;";
+
+    // $sql = "ALTER TABLE article ADD playlist varchar(500);";
+
     $results = mysqli_query($conn, $sql);
 
     if ($results === false) {
@@ -33,7 +37,7 @@
         <div class="article-container">
             <div class="main-article">
                 <div class="main-image">
-                    <img src="includes/images/rowan.jpeg" height="250px" width="420px">
+                    <img src="<?= $articles[0]['image_link'] ?>" height="250px" width="420px">
                 </div>
                 <div class="main-info">
                     <p>newest post:</p>
@@ -49,9 +53,9 @@
                     <?php foreach ($articles as $article): ?>
                         <div class="article">
                             <a href="article.php?id=<?= $article['id']; ?>">
-                            <img src="includes/images/temp.png" height=150px width=150px>
+                            <img src="<?= $article['image_link'] ?>" height=150px width=150px>
                             <h2><?= htmlspecialchars($article['title']); ?></h2>
-                            <p><?= htmlspecialchars($article['content']); ?></p>
+                            <p><?= substr(htmlspecialchars($article['content']), 0, 100) . "..."; ?></p>
                             </a>
                         </div>
                     <?php endforeach; ?>

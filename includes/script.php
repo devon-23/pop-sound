@@ -161,5 +161,12 @@
             //print_r($data);
             return $tml;
         }
+
+        function getImage($keyword) {
+            $keyword = str_replace(' ', '+', $keyword);
+            $url = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=3045249d8ec6a7e086de62f7bac9c7f9&text=" . $keyword . "&per_page=1&page=1&sort=relevance&format=json&nojsoncallback=1";
+            $data = json_decode(file_get_contents($url));
+            return $data;
+        }
     }
 ?>

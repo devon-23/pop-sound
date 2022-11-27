@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+
 * {
     font-family: 'Helvetica', 'Arial', sans-serif ;
     box-sizing: border-box;
@@ -12,8 +14,12 @@ body {
     padding-bottom: 10px;
 }
 
+#title-card {
+    font-family: 'Monoton'
+}
+
 nav {
-    background-color: rgb(181, 181, 234);
+    background-color: rgba(181, 181, 234, 0.803);
     overflow: hidden;
     width: 70vw;
     margin: 0 auto;
@@ -35,6 +41,10 @@ nav {
     text-decoration: none;
     font-size: 20px;
     text-transform: lowercase;
+}
+
+ul {
+    padding: 0;
 }
 
 #default-nav li a:hover {
@@ -402,4 +412,12 @@ h1 {
 a {
     text-decoration: none;
     color: black;
+}
+
+.nav-ul {
+    text-decoration: none;
+}
+
+#article-title {
+    font-size: 2.5em;
 }

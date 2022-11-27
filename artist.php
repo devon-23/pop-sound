@@ -7,6 +7,12 @@
     if ($artist != null):
         $artistInfo = $lastfm->getArtistInfo(str_replace(' ','+', $artist));
     endif;
+
+    $image = $lastfm->getImage($artist);
+
+    foreach ($image->photos->photo as $photo) {
+        $url = 'http://farm' . $photo->farm . '.staticflickr.com/'. $photo->server . '/' . $photo->id . '_' . $photo->secret . '.jpg';
+    }
 ?>
 
 <!-- Loads a different artist based on what was clicked from the index page -->
@@ -35,9 +41,7 @@
 
         <div class="information">
             <div class="album-picture">
-                <?php foreach($artistInfo->artist as $k=>$v): ?>
-                    <img src="<?php echo $v->image[3]; ?>" alt="unable to load" style="bottom:720px; border: 5px solid #000; float:right;">
-                <?php endforeach; ?>
+                <img src="<?= $url ?>" alt="unable to load" style="height:200px; bottom:720px; border: 5px solid #000; float:right;">
             </div>
             <div class="album-information">
                 <?php foreach($artistInfo->artist as $k=>$v):

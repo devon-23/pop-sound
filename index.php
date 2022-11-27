@@ -27,14 +27,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="includes/style.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,700&amp;family=Lato:ital,wght@0,700;1,700&amp;family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,700">
         <script src="https://unpkg.com/vue@3.0.5"></script>
         <title>Pop-Sound</title>
     </head>
     <body>
         <header>
-            <h1 class="title">Pop-Sound</h1>
+            <h1 class="title" id="title-card">POP-SOUND</h1>
             <nav class="navigation" id="default-nav">
-                <ul class="nav-ul">
+                <ul>
                     <li><a href="/~barcla29/pop-sound/playlists.php">Playlists</a></li>
                     <li><a href="/~barcla29/pop-sound/recentlyPlayed.php">Recently Played</a></li>
                     <li><a href="/~barcla29/pop-sound/articles.php">Articles</a></li>
