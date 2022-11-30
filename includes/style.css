@@ -9,6 +9,14 @@ body {
     background-color: rgb(248, 242, 249);
 }
 
+.main-header {
+    background-color: #4f745895;
+    padding-bottom: 30px;
+    width: 90vw;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
 .title {
     font-size: 5rem;
     padding-bottom: 10px;
@@ -23,6 +31,7 @@ nav {
     overflow: hidden;
     width: 70vw;
     margin: 0 auto;
+    border-radius: 10px;
 }
 
 #default-nav {
@@ -420,4 +429,25 @@ a {
 
 #article-title {
     font-size: 2.5em;
+}
+
+.charts-container {
+    display: flex;
+    margin: 0 auto;
+    width: 85vw;
+}
+
+.chart {
+    padding: 10px;
+    flex-grow: 1;
+    background-color: rgb(217, 212, 218);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+}
+
+.charts {
+    padding-top: 120px;
+
 }

@@ -23,6 +23,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="icon" type="image/x-icon" href="/~barcla29/pop-sound/includes/images/vinyl2.ico">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +33,7 @@
         <title>Pop-Sound</title>
     </head>
     <body>
-        <header>
+        <header class="main-header">
             <h1 class="title" id="title-card">POP-SOUND</h1>
             <nav class="navigation" id="default-nav">
                 <ul>
@@ -76,9 +77,43 @@
                 endforeach; ?>
                 </h6>
             </div>
+            <div class="charts">
+                <h1>Weekly Charts</h1>
+                <div class="charts-container">
+                    <div class="chart" id="top-tracks">
+                        Top Tracks<br>
+                        <?php foreach($weeklyTracks->weeklytrackchart as $k=>$v): 
+                            foreach($v->track as $q=>$w): ?>
+                                <br><a href="song.php?track=<?= $w->name; ?>&artist=<?= $w->artist; ?>&user=<?=$user?>">
+                                    <?= $w->name ?>
+                                    </a>
+                            <?php endforeach;
+                        endforeach; ?>
+                    </div>
+                    <div class="chart" id="top-albums">
+                        Top Albums<br>
+                        <?php foreach($weeklyAlbums->weeklyalbumchart as $k=>$v): 
+                            foreach($v->album as $q=>$w): ?>
+                                <br> <a href="album.php?album=<?= $w->name; ?>&artist=<?= $w->artist?>&user=<?=$user?>">
+                                 <?= $w->name ?>
+                                </a>
+                            <?php endforeach;
+                        endforeach; ?>
+                    </div>
+                    <div class="chart" id="top-artists">
+                        Top Artists<br>
+                        <?php foreach($weeklyArtists->weeklyartistchart as $k=>$v): 
+                            foreach($v->artist as $q=>$w): ?>
+                                <br> <a href="artist.php?artist=<?= $w->name; ?>&user=<?=$user?>"> 
+                                    <?= $w->name ?> 
+                                </a>
+                            <?php endforeach;
+                        endforeach; ?>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer>
-            
         </footer>
     </body>
     <script src="./includes/app.js"></script>
