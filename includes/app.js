@@ -18,6 +18,7 @@ const app = Vue.createApp({
             songSec: 0,
             military: true,
             api_key: "092d316884d8385f35ad8b84f5f42ef8",
+            link: "",
         }
     },
     created() {
@@ -64,6 +65,7 @@ const app = Vue.createApp({
                 this.artistName = `by ${track1.artist["#text"]}`
                 this.oldPicture = this.picture
                 this.picture = track1.image[3]["#text"]
+                this.link = `song.php?track=${this.songName}&artist=${track1.artist["#text"]}&user=${this.username}`
 
                 if (this.picture === "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png") {
                     this.picture = ""
@@ -73,6 +75,7 @@ const app = Vue.createApp({
                     this.countSec = 0
                     this.countMin = 0
                     this.songCount = 0
+                    this.link = `song.php?track=${this.songName}&artist=${track1.artist["#text"]}&user=${this.username}`
                     const res2 = await fetch(`http://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=${this.api_key}&artist=${results.recenttracks.track[0].artist["#text"]}&track=${this.songName}&format=json`)
                     const results2 = await res2.json()
                     if (results2.track.duration === '0' || results2.track.duration === undefined) {

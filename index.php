@@ -29,6 +29,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="includes/style.css">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,700&amp;family=Lato:ital,wght@0,700;1,700&amp;family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,700">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://unpkg.com/vue@3.0.5"></script>
         <title>Pop-Sound</title>
     </head>
@@ -47,6 +48,7 @@
             <div id="app">
                 <h1>Now playing:</h1>
                 <div id="player">
+                    <a :href="link">
                     <div class="album">
                         <img :src="picture">
                     </div>
@@ -61,6 +63,7 @@
                             <h3 class="artist-name">{{ artistName }}</h3>
                         </div>
                     </div>
+                    </a>
                 </div>
                 <h6 class="last-seen">Last seen: 
                 <?php $i = 0;
@@ -81,7 +84,7 @@
                 <h1>Weekly Charts</h1>
                 <div class="charts-container">
                     <div class="chart" id="top-tracks">
-                        Top Tracks<br>
+                        <p id="top-title">Top Tracks</p>
                         <?php foreach($weeklyTracks->weeklytrackchart as $k=>$v): 
                             foreach($v->track as $q=>$w): ?>
                                 <br><a href="song.php?track=<?= $w->name; ?>&artist=<?= $w->artist; ?>&user=<?=$user?>">
@@ -91,7 +94,7 @@
                         endforeach; ?>
                     </div>
                     <div class="chart" id="top-albums">
-                        Top Albums<br>
+                        <p id="top-title">Top Albums</p>
                         <?php foreach($weeklyAlbums->weeklyalbumchart as $k=>$v): 
                             foreach($v->album as $q=>$w): ?>
                                 <br> <a href="album.php?album=<?= $w->name; ?>&artist=<?= $w->artist?>&user=<?=$user?>">
@@ -101,7 +104,7 @@
                         endforeach; ?>
                     </div>
                     <div class="chart" id="top-artists">
-                        Top Artists<br>
+                        <p id="top-title">Top Artists</p>
                         <?php foreach($weeklyArtists->weeklyartistchart as $k=>$v): 
                             foreach($v->artist as $q=>$w): ?>
                                 <br> <a href="artist.php?artist=<?= $w->name; ?>&user=<?=$user?>"> 
