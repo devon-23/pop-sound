@@ -49,7 +49,7 @@
                 <?php foreach($trackInfo->track as $k=>$v):
                     foreach($v->wiki as $f=>$g): 
                         $string = substr($g->summary, 0, strpos($g->summary, "<a"))?>
-                        <?= $string; ?>
+                        <?= $string . "test"; ?>
                     <?php endforeach;
                 endforeach; ?>
             </div>

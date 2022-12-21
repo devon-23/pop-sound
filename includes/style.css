@@ -213,7 +213,7 @@ h1 {
     text-align: center;
 }
 
-#playlist-container {
+.playlists-container {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -459,9 +459,21 @@ a {
 
 @media only screen and (max-width: 600px) {
     .navigation {
-        background-color: blue;
-    }
+        display: none;
+      }
+    
+    .ham-check ul {
+        display: none;
+      }
 }
+
+#menu-toggle:checked ~ ul {
+    display: block;
+  }
+  
+  .ham-check ul {
+    display: none;
+  }
 
 .card-mb-4 {
     position: -webkit-sticky;
@@ -481,3 +493,31 @@ a {
     background-color: rgb(246, 222, 251);
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   }
+
+  label {
+    display: block;
+    position: relative;
+    width: 60px;
+    height: 30px;
+  }
+  
+  label::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: black;
+  }
+  
+  label::after {
+    content: '';
+    position: absolute;
+    top: calc(50% + 10px);
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: black;
+  }
+  

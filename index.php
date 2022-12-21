@@ -49,20 +49,20 @@
                 <h1>Now playing:</h1>
                 <div id="player">
                     <a :href="link">
-                    <div class="album">
-                        <img :src="picture">
-                    </div>
-                    <div class="info">
-                        <div class="progress-bar">
-                            <div class="time-current">{{countMin}}:{{(this.countSec<10?'0':'') + this.countSec }}</div>
-                            <div class="time-total">{{ songMin }}:{{ (this.songSec<10?'0':'') + this.songSec }}</div>
-                            <div class="fill" :style="{width: Math.floor((songCount/(songLength/ 1000))*100) + '%'}"></div>
+                        <div class="album">
+                            <img :src="picture">
                         </div>
-                        <div class="currently-playing">
-                            <h2 class="song-name">{{ songName }}</h2>
-                            <h3 class="artist-name">{{ artistName }}</h3>
+                        <div class="info">
+                            <div class="progress-bar">
+                                <div class="time-current">{{countMin}}:{{(this.countSec<10?'0':'') + this.countSec }}</div>
+                                <div class="time-total">{{ songMin }}:{{ (this.songSec<10?'0':'') + this.songSec }}</div>
+                                <div class="fill" :style="{width: Math.floor((songCount/(songLength/ 1000))*100) + '%'}"></div>
+                            </div>
+                            <div class="currently-playing">
+                                <h2 class="song-name">{{ songName }}</h2>
+                                <h3 class="artist-name">{{ artistName }}</h3>
+                            </div>
                         </div>
-                    </div>
                     </a>
                 </div>
                 <h6 class="last-seen">Last seen: 
